@@ -2,7 +2,7 @@
 <hr>
 
 <div class="row">
-    <div class="col-xs-12">
+    <div class="col-md-5">
         <a href="#" class="list-group-item clearfix">
             <div *ngFor="let recipe of recipes">
                 <div class="pull-left">
@@ -14,4 +14,8 @@
                 </span>
             </div>
         </a>
+    </div>
+    <div class="col-md-7">
+        <app-recipe-book-detail></app-recipe-book-detail>
+    </div>
 </div>
