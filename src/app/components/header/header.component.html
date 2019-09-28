@@ -14,8 +14,8 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <li><a href="#">Shopping List</a></li>
-          <li><a href="#">Recipe List</a></li>
+          <li><a [routerLink]="['/shopping-list']" routerLinkActive="router-link-active" >Shopping List</a></li>
+          <li><a [routerLink]="['/recipe-book']" routerLinkActive="router-link-active" >Recipe List</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li class="dropdown">

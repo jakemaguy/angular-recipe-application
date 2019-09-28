@@ -1,15 +1,17 @@
+<h1>Recipes</h1>
+<hr>
+
 <div class="row">
-    <div class="col-md-5">
-        <h1>Recipes</h1>
-        <hr>
-        <ul *ngFor="let recipe of recipes">
-            <li>
-                <p> {{ recipe }}</p>
-            </li>
-        </ul>
-    </div>
-    <div class="col-md-7">
-        <h2>Recipe Detail</h2>
-        <app-recipe-book-detail></app-recipe-book-detail>
-    </div>
+    <div class="col-xs-12">
+        <a href="#" class="list-group-item clearfix">
+            <div *ngFor="let recipe of recipes">
+                <div class="pull-left">
+                    <h4 class="list-group-item-heading">{{ recipe.name }}</h4>
+                    <p class="list-group-item-text">{{ recipe.description }}</p>
+                </div>
+                <span class="pull-right">
+                    <img [src]="recipe.imagePath" class="img-responsive" style="max-height: 50px;">
+                </span>
+            </div>
+        </a>
 </div>
