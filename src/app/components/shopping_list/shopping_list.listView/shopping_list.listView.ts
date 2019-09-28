@@ -6,6 +6,12 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class ShoppingListViewComponent implements OnInit {
+    shoppingList = [
+        'carrots',
+        'lettuce',
+        'avacados',
+        'cheetos'
+    ];
     constructor() { }
 
     ngOnInit() { }

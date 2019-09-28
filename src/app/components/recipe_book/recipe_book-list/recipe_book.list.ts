@@ -6,6 +6,12 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class RecipeBookListComponent implements OnInit {
+    recipes = [
+        'Chicken Parm',
+        'Ceasar Salad',
+        'Filet Mignon',
+        'Lasagna'
+    ];
     constructor() { }
 
     ngOnInit() { }
