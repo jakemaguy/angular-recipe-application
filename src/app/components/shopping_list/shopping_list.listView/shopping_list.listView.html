@@ -3,11 +3,11 @@
         <h1>Shopping list</h1>
     </div>
     <hr>
-    <div class="col-sm6">
-        <ul *ngFor="let item of shoppingList">
-            <li>  
-                <p>{{ item }}</p>
-            </li>
+    <div class="col-sm6" *ngFor="let item of shoppingList">
+        <ul class="list-group">
+            <a class="list-group-item" style="cursor: pointer;">
+                {{ item }}
+            </a>
         </ul>
     </div>
 </div>
