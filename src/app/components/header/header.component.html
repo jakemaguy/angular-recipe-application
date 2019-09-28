@@ -1,15 +1,16 @@
 <nav class="navbar sticky-top navbar-dark bg-primary">
-    <a class="navbar-brand"
-    [ngStyle]="{color: 'white'}">Recipe Tracker</a>
-    <div class="form-inline">
-        <button class="btn btn-primary"
-            [routerLink]="['/shopping-list']" routerLinkActive="router-link-active" >
-            Shopping List
-        </button>
-        <button class="btn btn-primary"
-            [routerLink]="['/recipe-book']" routerLinkActive="router-link-active" >
-            Recipe Book
-        </button>
+    <div class="container-fluid">
+        <a class="navbar-brand"
+        [ngStyle]="{color: 'white'}">Recipe Tracker</a>
+        <div class="form-inline">
+            <button class="btn btn-primary"
+                [routerLink]="['/shopping-list']" routerLinkActive="router-link-active" >
+                Shopping List
+            </button>
+            <button class="btn btn-primary"
+                [routerLink]="['/recipe-book']" routerLinkActive="router-link-active" >
+                Recipe Book
+            </button>
+        </div>
     </div>
-  
 </nav>
