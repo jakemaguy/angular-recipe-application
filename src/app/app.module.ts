@@ -9,6 +9,7 @@ import { RecipeBookListComponent } from './components/recipe_book/recipe_book-li
 import { ShoppingListEditComponent } from './components/shopping_list/shopping_list.edit/shopping_list.edit';
 import { ShoppingListViewComponent } from './components/shopping_list/shopping_list.listView/shopping_list.listView';
 import { HeaderComponent } from './components/header/header.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { HeaderComponent } from './components/header/header.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
