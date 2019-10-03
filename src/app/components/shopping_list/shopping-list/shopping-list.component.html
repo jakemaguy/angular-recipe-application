@@ -1,3 +1,18 @@
-<app-shopping-list-edit></app-shopping-list-edit>
-<app-shopping-list-listview></app-shopping-list-listview>
+<app-shopping-list-edit (addIngredient)="addIngredient($event)"></app-shopping-list-edit>
+<div class="row">
+    <div class="col-sm6">
+            <h1>Shopping list</h1>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-sm6">
+            <ul class="list-group">
+                <app-shopping-list-listview
+                *ngFor="let ingredient of ingredients"
+                [ingredient]="ingredient"></app-shopping-list-listview>
+            </ul>
+        </div>
+    </div>
+</div>
+
 
