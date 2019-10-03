@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
     selector: 'app-shopping-list-edit',
@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class ShoppingListEditComponent implements OnInit {
+    @ViewChild('nameInput', {static: true}) nameInput: ElementRef;
+    @ViewChild('amountInput', {static: true}) amountInput: ElementRef;
+
     constructor() { }
 
     ngOnInit() { }

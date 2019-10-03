@@ -10,6 +10,7 @@ import { ShoppingListEditComponent } from './components/shopping_list/shopping_l
 import { ShoppingListViewComponent } from './components/shopping_list/shopping_list.listView/shopping_list.listView';
 import { HeaderComponent } from './components/header/header.component';
 import { FormsModule } from '@angular/forms';
+import { ShoppingListComponent } from './components/shopping_list/shopping-list/shopping-list.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { FormsModule } from '@angular/forms';
     RecipeBookListComponent,
     ShoppingListEditComponent,
     ShoppingListViewComponent,
-    HeaderComponent
+    HeaderComponent,
+    ShoppingListComponent,
   ],
   imports: [
     BrowserModule,
