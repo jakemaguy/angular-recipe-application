@@ -9,6 +9,10 @@
     </div>
     <div class="col-sm-5">
         <app-recipe-book-detail
+        *ngIf="selectedRecipe; else infotext"
         [recipe]="selectedRecipe"></app-recipe-book-detail>
+        <ng-template #infotext>
+            <p>Please Select a Recipe</p> <!-- If no recipe item has been selected -->
+        </ng-template>
     </div>
 </div>

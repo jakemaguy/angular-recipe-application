@@ -17,7 +17,7 @@ export class RecipeBookListComponent implements OnInit {
         'https://spicysouthernkitchen.com/wp-content/uploads/Buffalo-Chicken-Mac-and-Cheese-8.jpg')
     ];
 
-    selectedRecipe = this.recipes[0];  // need to fix case where theres no recipe items
+    selectedRecipe: Recipe;
 
     constructor() {
     }
