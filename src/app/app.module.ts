@@ -11,7 +11,7 @@ import { ShoppingListViewComponent } from './components/shopping_list/shopping_l
 import { HeaderComponent } from './components/header/header.component';
 import { FormsModule } from '@angular/forms';
 import { ShoppingListComponent } from './components/shopping_list/shopping-list/shopping-list.component';
-
+import { DropdownDirective } from './components/shared/dropdown.directive';
 
 @NgModule({
   declarations: [
@@ -23,6 +23,7 @@ import { ShoppingListComponent } from './components/shopping_list/shopping-list/
     ShoppingListViewComponent,
     HeaderComponent,
     ShoppingListComponent,
+    DropdownDirective
   ],
   imports: [
     BrowserModule,
