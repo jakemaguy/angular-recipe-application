@@ -1,27 +1,22 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Recipe } from '../../../models/recipe.model';
+import { RecipeService } from '../../../services/recipe.service';
 
 @Component({
     selector: 'app-recipe-book-list',
-    templateUrl: 'recipe_book.list.html'
+    templateUrl: 'recipe_book.list.html',
+    providers: [RecipeService]
 })
 
 export class RecipeBookListComponent implements OnInit {
-    recipes: Recipe[] = [
-        new Recipe('Chicken Parmesan',
-        'Tender Pan Fried Chicken Breasts topped with tomato sauce.',
-        'https://www.cookingclassy.com/wp-content/uploads/2013/02/chicken-parmesan-16.jpg'),
-
-        new Recipe('Buffalo Mac And Cheese',
-        'Delicious Buf mac.  Perfect for any party.',
-        'https://spicysouthernkitchen.com/wp-content/uploads/Buffalo-Chicken-Mac-and-Cheese-8.jpg')
-    ];
-
+    recipes: Recipe[];
     selectedRecipe: Recipe;
 
-    constructor() {
+    constructor(private recipeService: RecipeService) {
     }
 
-    ngOnInit() { }
+    ngOnInit() {
+        this.recipes = this.recipeService.getRecipes();
+     }
 
 }
