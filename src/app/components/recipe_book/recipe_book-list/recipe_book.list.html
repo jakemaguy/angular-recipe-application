@@ -3,7 +3,7 @@
 
 <div class="row">
     <div class="col-sm-5">
-       <app-recipe-book-item *ngFor="let recipeItem of recipes; let index = i"
+       <app-recipe-book-item *ngFor="let recipeItem of recipes; let i = index"
        [recipe]="recipeItem"
        (selectedRecipe)="selectedRecipe = $event"></app-recipe-book-item>
     </div>
