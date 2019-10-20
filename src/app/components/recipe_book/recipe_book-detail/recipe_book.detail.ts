@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Recipe } from 'src/app/models/recipe.model';
 import { Ingredient } from 'src/app/models/ingredient.model';
-import { ShoppingListService } from '../../../services/shopping-list.service';
+import { RecipeService } from '../../../services/recipe.service';
 
 
 @Component({
@@ -12,15 +12,13 @@ import { ShoppingListService } from '../../../services/shopping-list.service';
 export class RecipeBookDetailComponent implements OnInit {
     @Input() recipe: Recipe;
 
-    constructor(private shopppingList: ShoppingListService) { }
+    constructor(private recipeService: RecipeService) { }
 
     ngOnInit() {
 
     }
 
     addToShoppingList() {
-        this.recipe.ingredients.forEach((ingredient: Ingredient) => {
-            this.shopppingList.addIngredient(ingredient);
-        });
+        this.recipeService.addIngredientsToShoppingList(this.recipe.ingredients);
     }
 }
